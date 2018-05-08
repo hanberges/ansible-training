@@ -1,2 +1,2 @@
 ---
-# tasks file for appdb
+- include: install-postgres.yml

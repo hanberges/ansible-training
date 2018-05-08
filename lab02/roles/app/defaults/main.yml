@@ -1,2 +1,6 @@
 ---
-# defaults file for app
+tomcat_path: "/usr/share/tomcat/webapps/ROOT"
+tomcat_src: "templates/index.html.j2"
+tomcat_dest: "/usr/share/tomcat/webapps/ROOT/index.html"
+tomcat_mode: "0644"
+

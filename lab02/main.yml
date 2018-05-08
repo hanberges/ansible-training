@@ -1,0 +1,27 @@
+- name: common role deployment
+  hosts: internal
+  gather_facts: false
+  become: true
+  roles:
+    - { role: "./roles/common" }
+
+- name: frontend role deployment
+  hosts: frontends
+  gather_facts: false
+  become: true
+  roles:
+    - { role: "./roles/frontend" }
+
+- name: app role deployment
+  hosts: apps
+  gather_facts: false
+  become: true
+  roles:
+    - { role: "./roles/app" }
+
+- name: appdb role deployment
+  hosts: appdbs
+  gather_facts: false
+  become: true
+  roles:
+    - { role: "./roles/appdb" }

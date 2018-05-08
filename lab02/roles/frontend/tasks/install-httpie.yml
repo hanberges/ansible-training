@@ -1,0 +1,7 @@
+---
+
+- name: Install httpie
+  yum: 
+    name: httpie
+    state: latest
+
