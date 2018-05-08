@@ -1,4 +1,5 @@
 ---
+network_object_type: "dummy-type"
 cloud_provider_name: "ospcloud"
 
 network_state: "present"
@@ -13,7 +14,7 @@ subnet_dns_nameserver2: "0.0.0.0"
 
 host_routes_destination1: "0.0.0.0/0"
 host_routes_nexthop1: "0.0.0.0"
-host_routes_destination2:: "0.0.0.0/0"
+host_routes_destination2: "0.0.0.0/0"
 host_routes_nexthop2: "0.0.0.0"
 
 router_state: "present"

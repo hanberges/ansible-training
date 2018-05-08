@@ -8,3 +8,5 @@
       - subnet: "{{ ext_sub }}"
     interfaces:
       - "{{ int_sub }}"
+  tags: router
+

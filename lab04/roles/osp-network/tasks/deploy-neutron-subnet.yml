@@ -13,3 +13,5 @@
          nexthop: "{{ host_routes_nexthop1 }}"
        - destination: "{{ host_routes_destination2 }}"
          nexthop: "{{ host_routes_nexthop2 }}"
+  tags: subnet
+

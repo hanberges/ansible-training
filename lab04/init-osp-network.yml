@@ -10,6 +10,6 @@
 
   roles:
     - role: osp-network
-      tags: network
-      name: "ext-network-1"
-      external: "true"
+      network_object_type: "network"
+      network_name: "ext-network-1"
+      network_external: "true"

@@ -1,7 +1,7 @@
 ---
 - include: deploy-neutron-network.yml
-  tags: network
+  when: network_object_type == "network"
 - include: deploy-neutron-subnet.yml
-  tags: subnet
+  when: network_object_type == "subnet"
 - include: deploy-neutron-router.yml
-  tags: router
+  when: network_object_type == "router"
