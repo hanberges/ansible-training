@@ -1,2 +1,23 @@
 ---
-# defaults file for osp-network
+cloud_provider_name: "ospcloud"
+
+network_state: "present"
+network_name: "dummy-network"
+network_external: "false"
+
+subnet_name: "dummy-subnet"
+subnet_state: "present"
+subnet_cidr: "0.0.0.0/0"
+subnet_dns_nameserver1: "0.0.0.0"
+subnet_dns_nameserver2: "0.0.0.0"
+
+host_routes_destination1: "0.0.0.0/0"
+host_routes_nexthop1: "0.0.0.0"
+host_routes_destination2:: "0.0.0.0/0"
+host_routes_nexthop2: "0.0.0.0"
+
+router_state: "present"
+router_name: "dummy-router"
+
+ext_sub: "ext-dummy-sub"
+int_sub: "int-dummy-sub"

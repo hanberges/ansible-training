@@ -1,0 +1,15 @@
+- hosts: localhost
+  become: yes
+  gather_facts: false
+
+  vars:
+    cloud_provider_name: "ospcloud"
+    ext_sub: "ext-subnet-1"
+    int_sub: "int-subnet-1"
+
+
+  roles:
+    - role: osp-network
+      tags: network
+      name: "ext-network-1"
+      external: "true"

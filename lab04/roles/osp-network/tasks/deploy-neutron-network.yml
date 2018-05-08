@@ -4,5 +4,3 @@
     state: "{{ network_state }}"
     name: "{{ network_name }}"
     external: "{{ network_external }}"
-
-

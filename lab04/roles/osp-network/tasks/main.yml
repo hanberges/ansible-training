@@ -1,4 +1,7 @@
 ---
 - include: deploy-neutron-network.yml
+  tags: network
 - include: deploy-neutron-subnet.yml
+  tags: subnet
 - include: deploy-neutron-router.yml
+  tags: router

@@ -1,11 +1,11 @@
 ---
 - os_subnet:
     cloud: "{{ cloud_provider_name }}"
-    state: "{{ subnet_test }}"
+    state: "{{ subnet_state }}"
     network_name: "{{ network_name }}"
     name: "{{ subnet_name }}"
     cidr: "{{ subnet_cidr }}"
-    dns_nameservers: 
+    dns_nameservers:
       - "{{ subnet_dns_nameserver1 }}"
       - "{{ subnet_dns_nameserver2 }}"
     host_routes:
