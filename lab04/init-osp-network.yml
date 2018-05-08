@@ -4,12 +4,47 @@
 
   vars:
     cloud_provider_name: "ospcloud"
-    ext_sub: "ext-subnet-1"
-    int_sub: "int-subnet-1"
+    ext_net: "ext_network"
+    int_net: "int_network"
+    ext_sub: "external_subnet"
+    int_sub: "internal_subnet"
 
 
   roles:
     - role: osp-network
       network_object_type: "network"
-      network_name: "ext-network-1"
+      network_name: "{{ ext_net }}"
       network_external: "true"
+
+    - role: osp-network
+      network_object_type: "subnet"
+      network_name: "{{ ext_net }}"
+      subnet_name: "{{ ext_sub }}"
+      subnet_cidr: "10.10.10.0/24"
+      subnet_dns_nameserver1: "8.8.8.7"
+      subnet_dns_nameserver2: "8.8.8.8"
+      host_routes_destination1: "0.0.0.0/0"
+      host_routes_nexthop1: "10.10.10.0"
+      host_routes_destination2: "192.168.0.0/24"
+      host_routes_nexthop2: "192.168.0.0"
+
+    - role: osp-network
+      network_object_type: "network"
+      network_name: "{{ int_net }}"
+      network_external: "false"
+
+    - role: osp-network
+      network_object_type: "subnet"
+      network_name: "{{ int_net }}"
+      subnet_name: "{{ int_sub }}"
+      subnet_cidr: "20.20.20.0/24"
+      subnet_dns_nameserver1: "8.8.8.7"
+      subnet_dns_nameserver2: "8.8.8.8"
+      host_routes_destination1: "0.0.0.0/0"
+      host_routes_nexthop1: "10.10.10.0"
+      host_routes_destination2: "192.168.0.0/24"
+      host_routes_nexthop2: "192.168.0.0"
+
+    - role: osp-network
+      network_object_type: "router"
+      router_name: "router1"
