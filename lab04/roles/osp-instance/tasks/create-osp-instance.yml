@@ -25,7 +25,7 @@
     timeout: 180
   register: instancefloatingip
 
-- name: Show "{{ instanceip }}" public IP
+- name: Show "{{ osp_instance_name }}" public IP
     debug: var=instancefloatingip.floating_ip.floating_ip_address
 
 - name: Wait for "{{ osp_instance_name }}" to be available
