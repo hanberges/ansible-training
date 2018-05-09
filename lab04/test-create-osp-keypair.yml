@@ -1,0 +1,10 @@
+- hosts: localhost
+  become: yes
+  gather_facts: false
+
+  vars:
+    cloud_provider_name: "ospcloud"
+
+  roles:
+    - role: osp-keypair
+      osp_keypair_name: "ansible-ssh-osp-keypair"

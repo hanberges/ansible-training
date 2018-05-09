@@ -1,0 +1,10 @@
+- hosts: localhost
+  become: yes
+  gather_facts: false
+
+  vars:
+    cloud_provider_name: "ospcloud"
+
+  roles:
+    - role: osp-flavor
+      osp_flavor_name: "medium-flavor-test1"
