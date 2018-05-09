@@ -1,0 +1,11 @@
+- hosts: localhost
+  become: yes
+  gather_facts: false
+
+  vars:
+    cloud_provider_name: "ospcloud"
+
+  roles:
+    - role: osp-securitygroup
+      osp_secugroup_name: "app_servers"
+      osp_secugroup_descr: "ports_open"
