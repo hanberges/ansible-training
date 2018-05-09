@@ -1,0 +1,17 @@
+---
+
+- name: Install haproxy
+  yum:
+    name: haproxy
+    state: latest
+
+- name: enable haproxy
+  service:
+    name: haproxy
+    state: started
+
+- name: configure haproxy
+  template:
+    src: "{{ haproxy_src }}" 
+    dest: "{{ haproxy_dest }}" 
+  notify: restart-haproxy

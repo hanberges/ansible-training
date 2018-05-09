@@ -26,13 +26,13 @@
   ##Create App2 server
   - name: Create app2 instance
     include_role:
-      name: osp-instance
+      name: osp-instances
       vars_from: app2.yaml
 
   ##Create DB server
   - name: Create db instance
     include_role:
-      name: osp-instance
+      name: osp-instances
       vars_from: db.yaml
 
   ##Get OSP facts

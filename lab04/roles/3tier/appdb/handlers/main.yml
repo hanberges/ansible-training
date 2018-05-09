@@ -1,0 +1,4 @@
+---
+- name: init-postgres
+  command: "postgresql-setup initdb"
+  command: "chkconfig postgresql on" 

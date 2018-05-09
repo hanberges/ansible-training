@@ -1,0 +1,4 @@
+---
+src_repo: "files/open_three-tier-app.repo"
+dest_repo: "/etc/yum.repos.d/open_three-tier-app.repo"
+mode_repo: "0644"

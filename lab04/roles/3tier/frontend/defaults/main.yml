@@ -1,0 +1,3 @@
+---
+haproxy_src: "templates/haproxy.cfg.j2" 
+haproxy_dest: "/etc/haproxy/haproxy.cfg"

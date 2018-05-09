@@ -1,0 +1,17 @@
+---
+- name: create ansible tomcat directory
+  file:
+    path: "{{ tomcat_path }}"
+    state: directory
+
+- name: copy static index.html to  {{ tomcat_path }}
+  template:
+    src: "{{ tomcat_src }}"
+    dest: "{{ tomcat_dest }}"
+    mode: "{{ tomcat_mode }}"
+
+- name: start tomcat
+  service:
+    name: tomcat
+    state: started
+
