@@ -9,6 +9,7 @@ osp_security_group_name: "dummy-secugroupname"
 osp_key_name: "ansible-ssh-osp-keypair"
 osp_int_network: "int_network"
 osp_ext_network: "ext_network"
+osp_floating_ip_state: "present"
 
 osp_instance_userdata: "|
   #!/bin/bash
@@ -16,5 +17,3 @@ osp_instance_userdata: "|
   cat /tmp/openstack.pub >> /home/cloud-user/.ssh/authorized_keys
   curl -o /tmp/internal.repo http://www.opentlc.com/download/ansible_bootcamp/repo/internal.repo
   cp /tmp/internal.repo /etc/yum.repos.d/internal.repo"
-
-osp_floating_ip_state: "present"

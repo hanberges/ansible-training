@@ -17,7 +17,7 @@
 - name: Add floating IP to "{{ osp_instance_name }}"
   os_floating_ip:
     cloud: "{{ cloud_provider_name }}"
-    state: " {{ osp_floating_ip_state }}"
+    state: "{{ osp_floating_ip_state }}"
     reuse: yes
     server: "{{ osp_instance_name }}"
     network: "{{ osp_ext_network }}"
