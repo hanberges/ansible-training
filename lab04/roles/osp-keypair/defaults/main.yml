@@ -1,7 +1,7 @@
 ---
 cloud_provider_name: "ospcloud"
 key_user_name: "{{ ansible_env.USER }}"
-ssh_key_file_path: "{{ .ssh/test_id_rsa }}"
+ssh_key_file_path: "{{ ~/.ssh/test_id_rsa }}"
 
 osp_keypair_state: "present"
 osp_keypair_name:  "dummy-keypair-name"
