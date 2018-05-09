@@ -1,0 +1,40 @@
+- hosts: localhost
+  become: yes
+  gather_facts: false
+
+  vars:
+    cloud_provider_name: "ospcloud"
+
+  tasks:
+  ##Get OSP facts
+  - name: Get OSP facts
+    include_role:
+      name: osp-facts
+
+- name: common role deployment
+  hosts: internal
+  gather_facts: false
+  become: true
+  roles:
+    - { role: "./roles/3tier/common" }
+
+- name: frontend role deployment
+  hosts: frontends
+  gather_facts: false
+  become: true
+  roles:
+    - { role: "./roles/3tier/frontend" }
+
+- name: app role deployment
+  hosts: apps
+  gather_facts: false
+  become: true
+  roles:
+    - { role: "./roles/3tier/app" }
+
+- name: appdb role deployment
+  hosts: appdbs
+  gather_facts: false
+  become: true
+  roles:
+    - { role: "./roles/3tier/appdb" }
