@@ -1,0 +1,11 @@
+- hosts: localhost
+  become: yes
+  gather_facts: false
+
+  vars:
+    cloud_provider_name: "ospcloud"
+
+  roles:
+    - role: osp-instance
+      osp_instance_name: "testds001"
+      osp_security_group_name: "app_servers"
