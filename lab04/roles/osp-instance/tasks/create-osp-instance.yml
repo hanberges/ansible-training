@@ -5,7 +5,7 @@
     name: "{{ osp_instance_name }}"
     image: "{{ osp_instance_image }}"
     meta: "group={{ osp_instance_group }},deployment_name={{ osp_instance_deployment }}"
-    flavor: "osp_instance_flavor"
+    flavor: "{{ osp_instance_flavor }}"
     security_groups: "{{ osp_security_group_name }}"
     key_name: "{{ osp_key_name }}"
     wait: yes
