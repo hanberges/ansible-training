@@ -1,5 +1,5 @@
 ---
-cloud_provider_name: "ospcloud"
+#cloud_provider_name: "ospcloud"
 
 osp_flavor_state: "present"
 osp_flavor_name: "dummy-flavor-name"

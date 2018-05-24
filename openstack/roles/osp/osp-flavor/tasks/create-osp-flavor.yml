@@ -1,7 +1,7 @@
 ---
 - name: Create osp flavor
   os_nova_flavor:
-    cloud: "{{ cloud_provider_name }}"
+    #cloud: "{{ cloud_provider_name }}"
     state: "{{ osp_flavor_state }}"
     name: "{{ osp_flavor_name }}"
     ram: "{{ osp_flavor_ram }}"
